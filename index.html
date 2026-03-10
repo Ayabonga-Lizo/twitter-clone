@@ -1,72 +1,769 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Twitter | X </title>
-</head>
-<body>
-    <!-- Sidebar -->
-    <div class="col-md-3 col-lg-2 sidebar p-3">
-      <!-- logo inside sidebar -->
-      <span class="sidebar-logo">
-        <img src="twitter-clone-html-css/assets/Twitter_Logo_WhiteOnImage.png" alt="Twitter logo">
-      </span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://abs.twimg.com/favicons/twitter.3.ico"
+      type="image/x-icon" />
+    <!-- Include Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
 
-      <ul class="nav flex-column">
-        <!-- Home -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="bi bi-house-door"></i> Home
-          </a>
-        </li>
-        <!-- Explore -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="bi bi-search"></i> Explore
-          </a>
-        </li>
-        <!-- Notifications -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="bi bi-bell"></i> Notifications
-          </a>
-        </li>
-        <!-- Messages -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="bi bi-envelope"></i> Messages
-          </a>
-        </li>
-        <!-- Bookmarks -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="bi bi-bookmark"></i> Bookmarks
-          </a>
-        </li>
-        <!-- Profile -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="bi bi-person"></i> Profile
-          </a>
-        </li>
-        <!-- More -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="bi bi-three-dots"></i> More
-          </a>
-        </li>
+    <!-- Include Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-      </ul>
-      <!-- Post button -->
-      <a href="#" class="tw-btn tw-btn-lg">
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="ignore.css" /> -->
+    <link rel="stylesheet" href="queries.css" />
+
+    <title>Home/X</title>
+  </head>
+  <body>
+    <div class="tw-container">
+      <div class="tw-row">
+        <div class="tw-col-1">
+          <!-- SIDEBAR -->
+
+          <header class="header px-2">
+            <section class="main-menu">
+              <nav class="main-nav">
+                <div class="logo">
+                  <a
+                    href=""
+                    class="tw-btn fs-4 rounded-circle text-white tw-btn-logo">
+                    <i class="bi bi-twitter-x"></i>
+                  </a>
+                </div>
+                <ul class="menu tw-sm">
+                  <!-- Home -->
+                  <li class="menu-item">
+                    <a href="" class="tw-btn tw-btn-md-outline active">
+                      <i class="bi bi-house-door-fill"></i>
+                      <span class="menu-label tw-sm-hide">Home</span>
+                    </a>
+                  </li>
+                  <!-- Explore -->
+                  <li class="menu-item">
+                    <a href="" class="tw-btn tw-btn-md-outline">
+                      <i class="bi bi-search"></i>
+                      <span class="menu-label tw-sm-hide">Explore</span>
+                    </a>
+                  </li>
+                  <!-- Notifications -->
+                  <li class="menu-item">
+                    <a href="" class="tw-btn tw-btn-md-outline">
+                      <i class="bi bi-bell"></i>
+                      <span class="menu-label tw-sm-hide">Notifications</span>
+                    </a>
+                  </li>
+                  <!-- Messages -->
+                  <li class="menu-item">
+                    <a href="" class="tw-btn tw-btn-md-outline">
+                      <i class="bi bi-envelope"></i>
+                      <span class="menu-label tw-sm-hide">Messages</span>
+                    </a>
+                  </li>
+                  <!-- Grok -->
+                  <li class="menu-item">
+                    <a href="" class="tw-btn tw-btn-md-outline">
+                      <i class="bi bi-slash-square"></i>
+                      <span class="menu-label tw-sm-hide">Grok</span>
+                    </a>
+                  </li>
+                  <!-- Profile -->
+                  <li class="menu-item">
+                    <a href="" class="tw-btn tw-btn-md-outline">
+                      <i class="bi bi-person"></i>
+                      <span class="menu-label tw-sm-hide">Profile</span>
+                    </a>
+                  </li>
+                  <!-- More -->
+                  <li class="menu-item">
+                    <a href="" class="tw-btn tw-btn-md-outline">
+                      <i class="bi bi-three-dots"></i>
+                      <span class="menu-label tw-sm-hide">More</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="post-box tw-sm">
+                <a href="#" class="tw-btn tw-btn-lg">
                   <span class="tw-sm-hide">Post</span>
-                  <i class=" tw-lg-hide"></i>
+                  <i class="bi bi-feather tw-lg-hide"></i>
                 </a>
+              </div>
+            </section>
+            <section class="section-account">
+              <button class="tw-btn tw-btn-account tw-sm-hide">
+                <div class="account-box">
+                  <a href="" class="account-link">
+                    <img
+                      class="account-img ut-rounded"
+                      src="assets/coding lab.jpg"
+                      alt="Coding Lab" />
+                  </a>
+                  <span class="account-info tw-sm-hide">
+                    <p class="account-name">Code Masters</p>
+                    <p class="account-username">@codemasters</p>
+                  </span>
+                  <i class="bi bi-three-dots tw-sm-hide"></i>
+                </div>
+              </button>
 
+              <a href="" class="account-link tw-lg-hide">
+                <img
+                  class="account-img ut-rounded"
+                  src="assets/coding lab.jpg"
+                  alt="Coding Lab" />
+              </a>
+            </section>
+          </header>
+        </div>
+
+        <div class="tw-col-2">
+          <!-- HEADER -->
+          <main class="main">
+            <div class="tw-row tw-row-justify">
+              <div class="tw-col-3">
+                <div class="main-content">
+                  <div class="tw-sm-header">
+                    <button class="tw-btn tw-btn-account">
+                      <div class="account-box">
+                        <a href="" class="account-link">
+                          <img
+                            class="account-img ut-rounded"
+                            src="assets/Code_On_Screen.jpg"
+                            alt="HTML Code on Screen" />
+                        </a>
+                        <span class="account-info tw-sm-hide">
+                          <p class="account-name">Ayabonga Lizo</p>
+                          <p class="account-username">@ayabongalizo</p>
+                        </span>
+                        <i class="bi bi-three-dots tw-sm-hide"></i>
+                      </div>
+                    </button>
+                    <div class="logo">
+                      <a
+                        href=""
+                        class="tw-btn fs-4 rounded-circle text-white tw-btn-logo">
+                        <i class="bi bi-twitter-x"></i>
+                      </a>
+                    </div>
+
+                    <div class="try-premium">
+                      <a href="#" class="tw-btn tw-btn-sm">Try Premium</a>
+                    </div>
+                  </div>
+                  <header class="main-tab">
+                    <a href="" class="tw-btn tw-btn-tab tw-btn-tab-active"
+                      >For you</a
+                    >
+                    <a href="" class="tw-btn tw-btn-tab">Following</a>
+                  </header>
+                  <!-- Section #1 -->
+                  <section class="post">
+                    <a href="#" class="account-link ut-mt-sm">
+                      <img
+                        class="account-img ut-rounded"
+                        src="assets/coding lab.jpg"
+                        alt="Coding Lab" />
+                    </a>
+
+                    <div class="post-container">
+                      <div class="post-form">
+                        <form class="form" action="">
+                          <input
+                            class="form-control post-input"
+                            placeholder="What is happening!"
+                            type="text" />
+                        </form>
+                      </div>
+                      <div class="post-for ut-border-bottom">
+                        <button class="tw-btn tw-btn-post-for">
+                          <i class="bi bi-globe-asia-australia"></i>
+                          <span>Everyone can reply</span>
+                        </button>
+                      </div>
+                      <div class="post-icons">
+                        <div class="post-icons-container">
+                          <button class="tw-btn tw-btn-post-icon">
+                            <i class="bi bi-image"></i>
+                          </button>
+                          <button class="tw-btn tw-btn-post-icon">
+                            <i class="bi bi-filetype-gif"></i>
+                          </button>
+                          <button class="tw-btn tw-btn-post-icon">
+                            <i class="bi bi-slash-square"></i>
+                          </button>
+                          <button class="tw-btn tw-btn-post-icon">
+                            <i class="bi bi-list-ul"></i>
+                          </button>
+                          <button class="tw-btn tw-btn-post-icon">
+                            <i class="bi bi-emoji-smile"></i>
+                          </button>
+                          <button class="tw-btn tw-btn-post-icon">
+                            <i class="bi bi-calendar-plus"></i>
+                          </button>
+                          <button disabled class="tw-btn tw-btn-post-icon">
+                            <i class="bi bi-geo-alt"></i>
+                          </button>
+
+                          <!-- GIF -->
+                        </div>
+                        <a href="#" class="tw-btn tw-btn-sm">Post</a>
+                      </div>
+                    </div>
+
+                    <!-- <div class="post-info">
+                      <button class="btn btn-info">Show</button>
+                    </div> -->
+                  </section>
+
+                  <!-- Section Post Articles -->
+                  <section class="post-articles ut-border-top">
+                    <!-- POST 01 -->
+                    <article class="post-article ut-border-bottom">
+                      <a href="" class="account-link">
+                        <img
+                          class="account-img ut-bordered"
+                          src="assets/The wireless.jpg"
+                          alt="ESPN LOgo" />
+                      </a>
+                      <div class="article-content-container">
+                        <header class="article-header">
+                          <div class="article-links">
+                            <a href="#" class="account-name">
+                              <span>The Daily Grind</span>
+                              <i class="bi bi-patch-check-fill badge-gold"></i>
+                            </a>
+                            <a href="#" class="account-username">@TheWireless</a>
+                            <a href="#" class="article-time">
+                              <time class="time">13h</time>
+                            </a>
+                          </div>
+
+                          <button class="btn-more">
+                            <i class="bi bi-three-dots"></i>
+                          </button>
+                        </header>
+
+                        <div class="main-article-content">
+                          <div class="article-content">
+                            <p>Connect to the conversation at 3pm on The Daily Grind. Afika sits down with Ayabonga Lizo — 
+                              the creative force behind Eyezooh Photography — whose visuals don’t just document, they resonate. 
+                              He’s self-taught, sharp, and focused on more than just the frame. 
+                              Whether it’s a brand shoot or a family moment, Ayabonga captures what matters! </p>
+                            <p>
+                              WhatsAPP your questions to be part of the conversation: 064 204 2976
+                            </p>
+                            <div class="content-img-container">
+                              <img
+                                src="assets/The daily grind.jpg"
+                                alt="Radio Interview with the photographer" />
+                            </div>
+                          </div>
+                        </div>
+                        <footer class="article-footer">
+                          <div class="footer-icons footer-icons-1">
+                            <button class="btn-chat">
+                              <i class="bi bi-chat"></i>
+                              <span class="footer-btn-text">536</span>
+                            </button>
+                            <button class="btn-repost">
+                              <i class="bi bi-repeat"></i>
+                              <span class="footer-btn-text">1.5k</span>
+                            </button>
+                            <button class="btn-like liked">
+                              <i class="bi bi-heart"></i>
+                              <i class="bi bi-heart-fill"></i>
+                              <span class="footer-btn-text">3k</span>
+                            </button>
+                            <button class="btn-view">
+                              <i class="bi bi-bar-chart"></i>
+                              <span class="footer-btn-text">1.2k</span>
+                            </button>
+                          </div>
+                          <div class="footer-icons footer-icons-2">
+                            <button class="btn-bookmark">
+                              <i class="bi bi-bookmark"></i>
+                            </button>
+                            <button class="btn-share">
+                              <i class="bi bi-upload"></i>
+                            </button>
+                          </div>
+                        </footer>
+                      </div>
+                    </article>
+
+                    <!-- POST 02 -->
+                    <article class="post-article ut-border-bottom">
+                      <a href="" class="account-link">
+                        <img
+                          class="account-img ut-rounded"
+                          src="./assets/The herald profile.jpg"
+                          alt="The Herald" />
+                      </a>
+                      <div class="article-content-container">
+                        <header class="article-header">
+                          <div class="article-links">
+                            <a href="#" class="account-name">
+                              <span>The Herald</span>
+                              <i class="bi bi-patch-check-fill badge-blue"></i>
+                            </a>
+                            <a href="#" class="account-username">
+                              @theherald</a
+                            >
+                            <a href="#" class="article-time">
+                              <time class="time">Dec 05</time>
+                            </a>
+                          </div>
+
+                          <button class="btn-more">
+                            <i class="bi bi-three-dots"></i>
+                          </button>
+                        </header>
+
+                        <div class="main-article-content">
+                          <div class="hashtags">
+                            <a href="" class="hashtag">#TheHerald</a>
+                            <a href="" class="hashtag">#News</a>
+                            <a href="" class="hashtag">#Updates</a>
+                          </div>
+                          <div class="article-content">
+                            <p>
+                              Youth equiped with skills to grow their businesses.
+                            </p>
+
+                            <div class="content-img-container">
+                              <img
+                                src="assets/The Herald.jpeg"
+                                alt="Youth Business Development" />
+                            </div>
+                          </div>
+                        </div>
+                        <footer class="article-footer">
+                          <div class="footer-icons footer-icons-1">
+                            <button class="btn-chat">
+                              <i class="bi bi-chat"></i>
+                              <span class="footer-btn-text">78</span>
+                            </button>
+                            <button class="btn-repost">
+                              <i class="bi bi-repeat"></i>
+                              <span class="footer-btn-text">500</span>
+                            </button>
+                            <button class="btn-like">
+                              <i class="bi bi-heart"></i>
+                              <i class="bi bi-heart-fill"></i>
+                              <span class="footer-btn-text">750</span>
+                            </button>
+                            <button class="btn-view">
+                              <i class="bi bi-bar-chart"></i>
+                              <span class="footer-btn-text">125</span>
+                            </button>
+                          </div>
+                          <div class="footer-icons footer-icons-2">
+                            <button class="btn-bookmark">
+                              <i class="bi bi-bookmark"></i>
+                            </button>
+                            <button class="btn-share">
+                              <i class="bi bi-upload"></i>
+                            </button>
+                          </div>
+                        </footer>
+                      </div>
+                    </article>
+
+                    <!-- POST AD -->
+                    <article class="post-article ut-border-bottom">
+                      <a href="" class="account-link">
+                        <img
+                          class="account-img ut-rounded"
+                          src="assets/649347703_1501740871517017_6445461803145810616_n.jpg"
+                          alt="President of South Africa Cyril Ramaphosa" />
+                      </a>
+                      <div class="article-content-container">
+                        <header class="article-header">
+                          <div class="article-links">
+                            <a href="#" class="account-name">
+                              <span>Cyril Ramaphosa</span>
+                              <i class="bi bi-patch-check-fill badge-blue"></i>
+                            </a>
+                            <a href="#" class="account-username">
+                              @cyrilramaphosa</a
+                            >
+                            <a href="#" class="article-time">
+                              <time class="time">Nov 28</time>
+                            </a>
+                          </div>
+                          <div class="article-more">
+                            <span class="article-ad">Ad</span>
+                            <button class="btn-more">
+                              <i class="bi bi-three-dots"></i>
+                            </button>
+                          </div>
+                        </header>
+
+                        <div class="main-article-content">
+                          <div class="hashtags">
+                            <a href="" class="hashtag"
+                              >#SouthAfricaPresident</a
+                            >
+                          </div>
+                          <div class="article-content">
+                            <p>
+                              President Cyril Ramaphosa and President Lula da Silva hold a joint media briefing in Brasília.
+                              <a href="" class="hashtag">#BRICKS</a> ,
+                              South Africa - Brazil Business Forum.
+                            </p>
+
+                            <div class="content-img-container">
+                              <img
+                                src="assets/doc-A2KW6G4-@photo0.jpg.webp"
+                                alt="Woman sailing in a wooden board along the river" />
+                              <div class="content-ad">
+                                <a href="#" class="ad-link"
+                                  >From TheMediaSnap</a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <footer class="article-footer">
+                          <div class="footer-icons footer-icons-1">
+                            <button class="btn-chat">
+                              <i class="bi bi-chat"></i>
+                              <span class="footer-btn-text">29</span>
+                            </button>
+                            <button class="btn-repost">
+                              <i class="bi bi-repeat"></i>
+                              <span class="footer-btn-text">17k</span>
+                            </button>
+                            <button class="btn-like">
+                              <i class="bi bi-heart"></i>
+                              <i class="bi bi-heart-fill"></i>
+                              <span class="footer-btn-text">213</span>
+                            </button>
+                            <button class="btn-view">
+                              <i class="bi bi-bar-chart"></i>
+                              <span class="footer-btn-text">3.5M</span>
+                            </button>
+                          </div>
+                          <div class="footer-icons footer-icons-2">
+                            <button class="btn-bookmark">
+                              <i class="bi bi-bookmark"></i>
+                            </button>
+                            <button class="btn-share">
+                              <i class="bi bi-upload"></i>
+                            </button>
+                          </div>
+                        </footer>
+                      </div>
+                    </article>
+
+                    <!-- POST 03 -->
+                    <article class="post-article ut-border-bottom">
+                      <a href="" class="account-link">
+                        <img
+                          class="account-img ut-rounded"
+                          src="assets/profile_rocks.jpg"
+                          alt="A Person standing on top of rocks" />
+                      </a>
+                      <div class="article-content-container">
+                        <header class="article-header">
+                          <div class="article-links">
+                            <a href="#" class="account-name">
+                              <span>Travel Guides</span>
+                              <i class="bi bi-patch-check-fill badge-blue"></i>
+                            </a>
+                            <a href="#" class="account-username">
+                              @besttravelguides</a
+                            >
+                            <a href="#" class="article-time">
+                              <time class="time">Dec 20</time>
+                            </a>
+                          </div>
+
+                          <button class="btn-more">
+                            <i class="bi bi-three-dots"></i>
+                          </button>
+                        </header>
+
+                        <div class="main-article-content">
+                          <div class="article-content">
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit
+                            </p>
+                            <div class="hashtags">
+                              <a href="" class="hashtag">#Bestoftravel</a>
+                            </div>
+
+                            <div class="content-img-container">
+                              <video autoplay controls>
+                                <source
+                                  type="video/mp4"
+                                  src="https://videos.pexels.com/video-files/3125438/3125438-uhd_2560_1440_30fps.mp4" />
+                              </video>
+                            </div>
+                          </div>
+                          <footer class="article-footer">
+                            <div class="footer-icons footer-icons-1">
+                              <button class="btn-chat">
+                                <i class="bi bi-chat"></i>
+                                <span class="footer-btn-text">536</span>
+                              </button>
+                              <button class="btn-repost">
+                                <i class="bi bi-repeat"></i>
+                                <span class="footer-btn-text">1.2k</span>
+                              </button>
+                              <button class="btn-like">
+                                <i class="bi bi-heart"></i>
+                                <i class="bi bi-heart-fill"></i>
+                                <span class="footer-btn-text">1.2k</span>
+                              </button>
+                              <button class="btn-view">
+                                <i class="bi bi-bar-chart"></i>
+                                <span class="footer-btn-text">1.2k</span>
+                              </button>
+                            </div>
+                            <div class="footer-icons footer-icons-2">
+                              <button class="btn-bookmark">
+                                <i class="bi bi-bookmark"></i>
+                              </button>
+                              <button class="btn-share">
+                                <i class="bi bi-upload"></i>
+                              </button>
+                            </div>
+                          </footer>
+                        </div>
+                      </div>
+                    </article>
+                  </section>
+                </div>
+              </div>
+              <div class="tw-col-4">
+                <aside class="side-content">
+                  <section class="section-form">
+                    <form class="search-form" action="">
+                      <input
+                        class="search-input"
+                        placeholder="Search"
+                        type="text" />
+                      <div class="search-icon">
+                        <i class="bi bi-search"></i>
+                      </div>
+                    </form>
+                  </section>
+
+                  <section class="section-try">
+                    <div class="try-container">
+                      <h2 class="secondary-heading">
+                        Try Premium for free today
+                      </h2>
+                      <p>
+                        Upgrade your experience with less ads, power tools, and
+                        more with Premium.
+                      </p>
+                      <a href="#" class="tw-btn tw-btn-sm"
+                        >Start free 14-day trial</a
+                      >
+                    </div>
+                  </section>
+                  <!-- SECTION: WHAT -->
+                  <section class="section-what">
+                    <div class="what-container">
+                      <h2 class="secondary-heading">What’s happening</h2>
+                      <a href="#" class="live">
+                        <div class="live-img-box">
+                          <img
+                            src="assets/soccer_ball.jpeg"
+                            alt="A soccer ball"
+                            class="live-img" />
+                        </div>
+
+                        <div class="live-text-container">
+                          <p class="live-heading">UEFA Champions League</p>
+                          <span class="live-text">Live</span>
+                        </div>
+                      </a>
+
+                      <ul class="trending">
+                        <li class="trending-element">
+                          <a class="trending-link" href="">
+                            <div class="trending-topic">
+                              <span class="topic"
+                                >Trending in South Africa</span
+                              >
+                              <i class="bi bi-three-dots"></i>
+                            </div>
+                            <p class="trending-name">South Africans Seek Trusted Banks Amid Fraud Fears on X</p>
+                          </a>
+                        </li>
+
+                        <li class="trending-element">
+                          <a class="trending-link" href="">
+                            <div class="trending-topic">
+                              <span class="topic"
+                                >Trending in South Africa</span
+                              >
+                              <i class="bi bi-three-dots"></i>
+                            </div>
+                            <p class="trending-name">#BBMSeason6</p>
+                          </a>
+                        </li>
+
+                        <li class="trending-element">
+                          <a class="trending-link" href="">
+                            <div class="trending-topic">
+                              <span class="topic"
+                                >Trending in South Africa</span
+                              >
+                              <i class="bi bi-three-dots"></i>
+                            </div>
+                            <p class="trending-name">Standard Bank Denies Pension Fraud Claims Amid Social Media Outcry</p>
+                          </a>
+                        </li>
+
+                        <li class="trending-element">
+                          <a class="trending-link" href="">
+                            <div class="trending-topic">
+                              <span class="topic"
+                                >Trending in South Africa</span
+                              >
+                              <i class="bi bi-three-dots"></i>
+                            </div>
+                            <div class="trending-container">
+                              <p class="trending-name">Sundowns</p>
+                              <span class="trending-post-number"
+                                >2,069 posts</span
+                              >
+                            </div>
+                          </a>
+                        </li>
+
+                        <a href="#" class="show-more">Show more</a>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <!-- Section Who -->
+                  <section class="section-who">
+                    <div class="who-container">
+                      <h2 class="secondary-heading">Who to follow</h2>
+                      <ul class="accounts">
+                        <!-- Account 1 -->
+                        <li class="account">
+                          <div class="account-container">
+                            <a href="#" class="account-link">
+                              <img
+                                src="assets/The Presidency of the Republic of South Africa.jpg"
+                                alt="The Presidency of the Republic of South Africa Logo"
+                                class="account-img ut-rounded" />
+                            </a>
+                            <div class="account-info">
+                              <a href="#" class="account-name">
+                                <span>The Presidency of the Republic of South Africa</span>
+                              </a>
+                              <a href="#" class="account-username"
+                                >@ThePresidencyofRSA</a
+                              >
+                            </div>
+                          </div>
+                          <a href="#" class="tw-btn tw-btn-xm">Follow</a>
+                        </li>
+
+                        <!-- Account 2 -->
+                        <li class="account">
+                          <div class="account-container">
+                            <a href="#" class="account-link">
+                              <img
+                                src="assets/Goal_news.jpg"
+                                alt="GOAL News Logo"
+                                class="account-img ut-rounded" />
+                            </a>
+                            <div class="account-info">
+                              <a href="#" class="account-name">
+                                <span>GOAL News</span>
+                                <i
+                                  class="bi bi-patch-check-fill badge-gold"></i>
+                              </a>
+                              <a href="#" class="account-username">@GoalNews</a>
+                            </div>
+                          </div>
+                          <a href="#" class="tw-btn tw-btn-xm">Follow</a>
+                        </li>
+
+                        <!-- Account 3 -->
+                        <li class="account">
+                          <div class="account-container">
+                            <a href="#" class="account-link">
+                              <img
+                                src="assets/SABCnews.jpg"
+                                alt="SABC News Logo"
+                                class="account-img ut-rounded" />
+                            </a>
+                            <div class="account-info">
+                              <a href="#" class="account-name">
+                                <span>SABC News</span>
+                                <i
+                                  class="bi bi-patch-check-fill badge-blue"></i>
+                              </a>
+                              <a href="#" class="account-username">@SABCNews</a>
+                            </div>
+                          </div>
+                          <a href="#" class="tw-btn tw-btn-xm">Follow</a>
+                        </li>
+                      </ul>
+
+                      <a href="#" class="show-more">Show more</a>
+                    </div>
+                  </section>
+
+                  <footer class="footer">
+                    <nav class="footer-nav">
+                      <ul class="footer-menu">
+                        <li class="footer-item">
+                          <a href="#" class="footer-link">Terms of Services</a>
+                        </li>
+                        <li class="footer-item">
+                          <a href="#" class="footer-link">Privacy Policy</a>
+                        </li>
+                        <li class="footer-item">
+                          <a href="#" class="footer-link">Cookie Policy</a>
+                        </li>
+                        <li class="footer-item">
+                          <a href="#" class="footer-link">Accessibility</a>
+                        </li>
+                        <li class="footer-item">
+                          <a href="#" class="footer-link">Ads info</a>
+                        </li>
+                        <li class="footer-item">
+                          <a href="#" class="footer-link">
+                            <span>More</span>
+                            <i class="bi bi-three-dots"></i>
+                          </a>
+                        </li>
+                        <li class="footer-item">
+                          <a href="#" class="footer-link"
+                            >&copy; 2025 X Corp.</a
+                          >
+                        </li>
+                      </ul>
+                    </nav>
+                  </footer>
+                </aside>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
     </div>
-
-  </div>
+  </body>
+</html>
