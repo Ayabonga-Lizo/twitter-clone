@@ -19,9 +19,9 @@ This project is a fully responsive **Twitter-inspired interface** crafted purely
 ---
 
 ## 📸 Example Screenshots
-<img width="1785" height="870" alt="image" src="https://github.com/user-attachments/assets/33d57570-7435-42ff-9f12-6f92937a53d6" />
-<img width="1711" height="877" alt="image" src="https://github.com/user-attachments/assets/178b0728-e5f6-4ec8-b49d-3279aa4d8726" />
-<img width="666" height="868" alt="image" src="https://github.com/user-attachments/assets/62621422-aba1-402c-afe6-6ec7ca91a14d" />
+<img width="1785" height="870" alt="image" src="assets/Screenshot 2026-03-17 110601.png" />
+<img width="1711" height="877" alt="image" src="assets/Screenshot2 2026-03-17 110651.png" />
+<img width="666" height="868" alt="image" src="assets/Screenshot3 2026-03-17 110735.png" />
 
 ---
 
